@@ -11,15 +11,4 @@ jobs:
   plan:
   - get: resource-code
   - task: task-install
-    config:
-      platform: linux
-      image_resource:
-        type: docker-image
-        source:
-          repository: node
-          tag: alpine
-      run:
-        path: ./resource-code/ci/install.sh
-        dir: ./resource-code
-      inputs:
-      - name: resource-code
+    file: resource-code/ci/task-install.yml
