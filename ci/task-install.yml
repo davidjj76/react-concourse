@@ -1,0 +1,14 @@
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: node
+    tag: alpine
+run:
+  path: ls -laR
+  # path: sh
+  # args:
+  #   - ./ci/install.sh
+  # dir: resource-code
+inputs:
+  - name: resource-code
