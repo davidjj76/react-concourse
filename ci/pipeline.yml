@@ -13,5 +13,5 @@ jobs:
     trigger: true
   - task: task-install
     file: resource-code/ci/task-install.yml
-  - task: task-build
-    file: resource-code/ci/task-build.yml
+#   - task: task-build
+#     file: resource-code/ci/task-build.yml
