@@ -10,5 +10,6 @@ jobs:
 - name: job-install
   plan:
   - get: resource-code
+    trigger: true
   - task: task-install
     file: resource-code/ci/task-install.yml
