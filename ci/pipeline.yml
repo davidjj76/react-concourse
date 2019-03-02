@@ -19,6 +19,7 @@ jobs:
           repository: node
           tag: alpine
       run:
-        path: resource-code/ci/install.sh
+        path: ./resource-code/ci/install.sh
+        dir: ./resource-code
       inputs:
       - name: resource-code
