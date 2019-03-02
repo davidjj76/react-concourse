@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # move node_modules input into code folder
-echo 'Moving node_modules to app folder...'
-ls ../node_modules
+echo 'Creating directory inside app folder...'
 mkdir node_modules
-cp ../node_modules/* ./node_modules
+
+echo 'Moving node_modules to app folder...'
+cp -a ../node_modules/. ./node_modules
 
 # build application
 echo 'Building application...'
