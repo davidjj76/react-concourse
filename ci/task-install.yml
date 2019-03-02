@@ -5,12 +5,9 @@ image_resource:
     repository: node
     tag: alpine
 run:
-  path: ls
+  path: sh
   args:
-    - -laR
-  # path: sh
-  # args:
-  #   - ./ci/install.sh
-  # dir: resource-code
+    - ./ci/install.sh
+  dir: resource-code
 inputs:
   - name: resource-code
