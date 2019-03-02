@@ -1,0 +1,25 @@
+groups: []
+resources:
+- name: resource-code
+  type: git
+  source:
+    branch: master
+    uri: https://github.com/davidjj76/react-concourse.git
+resource_types: []
+jobs:
+- name: job-install
+  plan:
+  - get: resource-code
+  - task: task-install
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: node
+          tag: alpine
+      run:
+        path: resource-code/ci/install.sh
+        dir: resource-code
+      inputs:
+      - name: resource-code
