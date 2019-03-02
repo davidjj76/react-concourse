@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # install dependencies
-ls -laR
+npm install
