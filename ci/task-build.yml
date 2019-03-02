@@ -7,7 +7,8 @@ image_resource:
 run:
   path: npm
   args:
-    - install
+    - run
+    - build
   dir: resource-code
 inputs:
   - name: resource-code
